@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Kreuzworträtsel</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <main>
+
+    <section id="grid-container">
+      <h1>Kreuzworträtsel</h1>
+      <p>
+        Löse das Rätsel und finde das gesuchte Lösungswort.
+      </p>
+    </section>
+
+
+    <section id="rules">
+
+      <h2>Hinweise</h2>
+
+      <ul>
+        <li>
+          Gib die Lösungswörter ohne Leerzeichen ein.
+        </li>
+
+        <li>
+          Umlaute werden als AE, OE oder UE geschrieben
+          (z. B. MÜLL → MUELL).
+        </li>
+
+        <li>
+          Alle Buchstaben werden automatisch in Großbuchstaben umgewandelt.
+        </li>
+
+        <li>
+          Nur die nummerierten Wörter sind gesucht.
+        </li>
+
+        <li>
+          Mit den Pfeiltasten kannst du dich im Rätsel bewegen.
+        </li>
+
+        <li>
+          Gib die Lösungswörter bitte nicht an andere Personen weiter.
+        </li>
+
+        <li>
+          Enthält ein generiertes Rätsel fünf oder weniger Begriffe,
+          lade die Seite bitte neu.
+        </li>
+
+        <li>
+          Viel Spaß beim Rätseln!
+        </li>
+      </ul>
+
+    </section>
+
+
+    <section aria-label="Kreuzworträtsel">
+      <table id="crossword"></table>
+    </section>
+
+
+    <section id="hints">
+
+      <h2>Begriffe</h2>
+
+      <div class="hint-group">
+        <h3>Waagerecht</h3>
+        <ul id="hints-across"></ul>
+      </div>
+
+      <div class="hint-group">
+        <h3>Senkrecht</h3>
+        <ul id="hints-down"></ul>
+      </div>
+
+    </section>
+
+
+    <section id="controls">
+      <button id="check-btn">
+        Rätsel prüfen
+      </button>
+    </section>
+
+  </main>
+
+
+  <!-- Erfolgs-Popup -->
+  <div id="secret-popup">
+
+    <div id="secret-popup-content">
+
+      <h2>Geschafft!</h2>
+
+      <p>
+        Du hast das Kreuzworträtsel erfolgreich gelöst.
+      </p>
+
+      <p>
+        Dein Lösungswort lautet:
+      </p>
+
+      <p>
+        <strong id="secret-code"></strong>
+      </p>
+
+      <button id="close-popup">
+        Schließen
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <!-- Hinweis-Popup -->
+  <div id="info-popup">
+
+    <div id="info-popup-content">
+
+      <h2>Hinweis</h2>
+
+      <p id="info-message"></p>
+
+      <button id="close-info-popup">
+        Schließen
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <script src="crossword.js"></script>
+  <script src="app.js"></script>
+
+</body>
+
+</html>

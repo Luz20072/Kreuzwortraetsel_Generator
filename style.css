@@ -1,0 +1,320 @@
+/* ==========================================
+   GRUNDLAYOUT
+   ========================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 2rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #1f2937;
+  background: #f5f7fa;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+/* ==========================================
+   ÜBERSCHRIFT
+   ========================================== */
+
+#grid-container {
+  margin-bottom: 1.5rem;
+}
+
+#grid-container h1 {
+  margin: 0 0 0.5rem;
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+#grid-container p {
+  margin: 0;
+  color: #6b7280;
+}
+
+
+/* ==========================================
+   HINWEISE / REGELN
+   ========================================== */
+
+#rules {
+  margin-bottom: 2rem;
+  padding: 1.25rem 1.5rem;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+#rules h2 {
+  margin: 0 0 0.75rem;
+  font-size: 1.1rem;
+}
+
+#rules ul {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+#rules li {
+  margin-bottom: 0.4rem;
+  line-height: 1.5;
+}
+
+#rules li:last-child {
+  margin-bottom: 0;
+}
+
+
+/* ==========================================
+   KREUZWORTRÄTSEL
+   ========================================== */
+
+#crossword {
+  border-collapse: collapse;
+  border: 2px solid #111827;
+  background: #ffffff;
+}
+
+#crossword td {
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  text-align: center;
+  vertical-align: middle;
+  background: #ffffff;
+}
+
+#crossword td:not(.block) {
+  border: 1px solid #9ca3af;
+}
+
+#crossword td.block {
+  background: #d1d5db;
+  border: none;
+}
+
+
+/* Eingabefelder */
+
+#crossword input {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+
+  cursor: text;
+}
+
+#crossword input:focus {
+  background: #e5e7eb;
+}
+
+
+/* ==========================================
+   BEGRIFFE
+   ========================================== */
+
+#hints {
+  margin-top: 2rem;
+  max-width: 700px;
+}
+
+#hints h2 {
+  margin: 0 0 1rem;
+  font-size: 1.4rem;
+}
+
+.hint-group {
+  margin-bottom: 1.5rem;
+}
+
+.hint-group h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+}
+
+#hints ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#hints li {
+  margin-bottom: 0.4rem;
+  line-height: 1.4;
+}
+
+
+/* ==========================================
+   BUTTON
+   ========================================== */
+
+#controls {
+  margin-top: 1.5rem;
+}
+
+#check-btn {
+  padding: 0.7rem 1.2rem;
+
+  border: none;
+  border-radius: 7px;
+
+  background: #2563eb;
+  color: #ffffff;
+
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.15s ease,
+    transform 0.1s ease;
+}
+
+#check-btn:hover {
+  background: #1d4ed8;
+}
+
+#check-btn:active {
+  transform: translateY(1px);
+}
+
+#check-btn:focus-visible {
+  outline: 3px solid rgba(37, 99, 235, 0.3);
+  outline-offset: 2px;
+}
+
+
+/* ==========================================
+   POPUPS
+   ========================================== */
+
+#secret-popup,
+#info-popup {
+  position: fixed;
+  inset: 0;
+
+  display: none;
+  align-items: center;
+  justify-content: center;
+
+  padding: 1rem;
+
+  background: rgba(15, 23, 42, 0.7);
+  z-index: 1000;
+}
+
+#secret-popup-content,
+#info-popup-content {
+  width: 100%;
+  max-width: 420px;
+  padding: 2rem;
+
+  background: #ffffff;
+  border-radius: 12px;
+
+  text-align: center;
+
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+}
+
+#secret-popup-content h2,
+#info-popup-content h2 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+#secret-popup-content p,
+#info-popup-content p {
+  line-height: 1.5;
+}
+
+#secret-code {
+  display: block;
+  margin: 1rem 0;
+
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+
+/* ==========================================
+   POPUP-BUTTONS
+   ========================================== */
+
+#close-popup,
+#close-info-popup {
+  padding: 0.65rem 1.1rem;
+
+  border: 1px solid #d1d5db;
+  border-radius: 7px;
+
+  background: #f3f4f6;
+  color: #1f2937;
+
+  font-family: inherit;
+  font-size: 0.9rem;
+
+  cursor: pointer;
+
+  transition: background-color 0.15s ease;
+}
+
+#close-popup:hover,
+#close-info-popup:hover {
+  background: #e5e7eb;
+}
+
+
+/* ==========================================
+   RESPONSIVE DESIGN
+   ========================================== */
+
+@media (max-width: 700px) {
+
+  body {
+    padding: 1rem;
+  }
+
+  #grid-container h1 {
+    font-size: 1.6rem;
+  }
+
+  #crossword td {
+    width: 30px;
+    height: 30px;
+  }
+
+  #crossword input {
+    font-size: 0.9rem;
+  }
+
+  #rules {
+    padding: 1rem;
+  }
+
+  #secret-popup-content,
+  #info-popup-content {
+    padding: 1.5rem;
+  }
+}
